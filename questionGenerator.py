@@ -3,7 +3,7 @@ import openai
 
 app = Flask(__name__)
 
-openai.api_key = "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"
+openai.api_key = "nvm"
 
 def generate_review_material_with_gpt3(topic):
     prompt = f"Generate a reviewer material and cheat sheet for the topic: {topic}"
