@@ -1,5 +1,4 @@
 
-
 ```markdown
 # Python LinkedList Cheat Sheet
 
@@ -17,6 +16,8 @@ A LinkedList is a data structure consisting of a sequence of elements, where eac
 
 ## Node Structure
 
+### Singly LinkedList Node
+
 ```python
 class Node:
     def __init__(self, data):
@@ -24,10 +25,39 @@ class Node:
         self.next = None
 ```
 
-## Creating a LinkedList
+### Doubly LinkedList Node
 
 ```python
-class LinkedList:
+class Node:
+    def __init__(self, data):
+        self.data = data
+        self.next = None
+        self.prev = None
+```
+
+## Creating a LinkedList
+
+### Singly LinkedList
+
+```python
+class SinglyLinkedList:
+    def __init__(self):
+        self.head = None
+```
+
+### Doubly LinkedList
+
+```python
+class DoublyLinkedList:
+    def __init__(self):
+        self.head = None
+        self.tail = None
+```
+
+### Circular LinkedList
+
+```python
+class CircularLinkedList:
     def __init__(self):
         self.head = None
 ```
@@ -100,33 +130,75 @@ def display(self):
 ## Example
 
 ```python
-# Creating a LinkedList
-my_linkedlist = LinkedList()
+# Creating a Singly LinkedList
+singly_linkedlist = SinglyLinkedList()
 
 # Insertion at the beginning
-my_linkedlist.insert_at_beginning(3)
-my_linkedlist.insert_at_beginning(2)
-my_linkedlist.insert_at_beginning(1)
+singly_linkedlist.insert_at_beginning(3)
+singly_linkedlist.insert_at_beginning(2)
+singly_linkedlist.insert_at_beginning(1)
 
 # Insertion at the end
-my_linkedlist.insert_at_end(4)
-my_linkedlist.insert_at_end(5)
+singly_linkedlist.insert_at_end(4)
+singly_linkedlist.insert_at_end(5)
 
-# Display the LinkedList
-my_linkedlist.display()  # Output: 1 -> 2 -> 3 -> 4 -> 5 -> None
+# Display the Singly LinkedList
+singly_linkedlist.display()  # Output: 1 -> 2 -> 3 -> 4 -> 5 -> None
 
 # Delete an element
-my_linkedlist.delete(3)
+singly_linkedlist.delete(3)
 
 # Search for an element
-found = my_linkedlist.search(4)
+found = singly_linkedlist.search(4)
 print(found)  # Output: True
 
-# Display the LinkedList after deletion
-my_linkedlist.display()  # Output: 1 -> 2 -> 4 -> 5 -> None
+# Display the Singly LinkedList after deletion
+singly_linkedlist.display()  # Output: 1 -> 2 -> 4 -> 5 -> None
+
+# Creating a Doubly LinkedList
+doubly_linkedlist = DoublyLinkedList()
+
+# Insertion at the beginning
+doubly_linkedlist.insert_at_beginning(3)
+doubly_linkedlist.insert_at_beginning(2)
+doubly_linkedlist.insert_at_beginning(1)
+
+# Insertion at the end
+doubly_linkedlist.insert_at_end(4)
+doubly_linkedlist.insert_at_end(5)
+
+# Display the Doubly LinkedList
+doubly_linkedlist.display()  # Output: 1 -> 2 -> 3 -> 4 -> 5 -> None
+
+# Delete an element
+doubly_linkedlist.delete(3)
+
+# Display the Doubly LinkedList after deletion
+doubly_linkedlist.display()  # Output: 1 -> 2 -> 4 -> 5 -> None
+
+# Creating a Circular LinkedList
+circular_linkedlist = CircularLinkedList()
+
+# Insertion at the beginning
+circular_linkedlist.insert_at_beginning(3)
+circular_linkedlist.insert_at_beginning(2)
+circular_linkedlist.insert_at_beginning(1)
+
+# Insertion at the end
+circular_linkedlist.insert_at_end(4)
+circular_linkedlist.insert_at_end(5)
+
+# Display the Circular LinkedList
+circular_linkedlist.display()  # Output: 1 -> 2 -> 3 -> 4 -> 5 -> (back to 1)
+
+# Delete an element
+circular_linkedlist.delete(3)
+
+# Display the Circular LinkedList after deletion
+circular_linkedlist.display()  # Output: 1 -> 2 -> 4 -> 5 -> (back to 1)
 ```
 
-This cheat sheet provides an overview of Python LinkedList concepts, including types of LinkedLists, node structure, creating a LinkedList, and common LinkedList operations with code examples.
+This cheat sheet provides an overview of Python LinkedList concepts, including Singly, Doubly, and Circular LinkedLists, node structure, creating LinkedLists, and common LinkedList operations with code examples.
 ```
 
 You can copy and paste this markdown code into a GitHub README or Markdown file.
