@@ -985,80 +985,103 @@ Print(new_string) \# Output: "Hello, Python!"
 
 \`\`\`python
 
-My_string = "Hello, World!"
+Certainly! Here are some example codes and their corresponding outputs for common string operations in Python:
 
-If "Hello" in my_string:
+**1. String Length:**
 
-Print("Found 'Hello'") \# Output: "Found 'Hello'"
+```python
+my_string = "Hello, World!"
+length = len(my_string)
+print(length)  # Output: 13
+```
 
-\`\`\`
+**2. Accessing Characters:**
 
-\*\*7. Changing Case:\*\*
+```python
+my_string = "Hello, World!"
+char = my_string[0]
+print(char)  # Output: "H"
+```
 
-\`\`\`python
+**3. Slicing Strings:**
 
-My_string = "Hello, World!"
+```python
+my_string = "Hello, World!"
+substring = my_string[0:5]
+print(substring)  # Output: "Hello"
+```
 
-Uppercase_string = my_string.upper()
+**4. String Concatenation:**
 
-Print(uppercase_string) \# Output: "HELLO, WORLD!"
+```python
+string1 = "Hello, "
+string2 = "World!"
+new_string = string1 + string2
+print(new_string)  # Output: "Hello, World!"
+```
 
-Lowercase_string = my_string.lower()
+**5. Modifying Strings (Creating a New Modified String):**
 
-Print(lowercase_string) \# Output: "hello, world!"
+```python
+my_string = "Hello, World!"
+new_string = my_string.replace("World", "Python")
+print(new_string)  # Output: "Hello, Python!"
+```
 
-Titlecase_string = my_string.title()
+**6. Checking for Substrings:**
 
-Print(titlecase_string) \# Output: "Hello, World!"
+```python
+my_string = "Hello, World!"
+if "Hello" in my_string:
+    print("Found 'Hello'")  # Output: "Found 'Hello'"
+```
 
-\`\`\`
+**7. Changing Case:**
 
-\*\*8. Stripping Whitespace:\*\*
+```python
+my_string = "Hello, World!"
+uppercase_string = my_string.upper()
+print(uppercase_string)  # Output: "HELLO, WORLD!"
 
-\`\`\`python
+lowercase_string = my_string.lower()
+print(lowercase_string)  # Output: "hello, world!"
 
-My_string = " Hello, World! "
+titlecase_string = my_string.title()
+print(titlecase_string)  # Output: "Hello, World!"
+```
 
-Stripped_string = my_string.strip()
+**8. Stripping Whitespace:**
 
-Print(stripped_string) \# Output: "Hello, World!"
+```python
+my_string = "   Hello, World!   "
+stripped_string = my_string.strip()
+print(stripped_string)  # Output: "Hello, World!"
 
-Left_stripped = my_string.lstrip()
+left_stripped = my_string.lstrip()
+print(left_stripped)  # Output: "Hello, World!   "
 
-Print(left_stripped) \# Output: "Hello, World! "
+right_stripped = my_string.rstrip()
+print(right_stripped)  # Output: "   Hello, World!"
+```
 
-Right_stripped = my_string.rstrip()
+**9. Splitting and Joining Strings:**
 
-Print(right_stripped) \# Output: " Hello, World!"
+```python
+my_string = "apple,banana,orange"
+my_list = my_string.split(",")
+print(my_list)  # Output: ['apple', 'banana', 'orange']
 
-\`\`\`
+separator = "-"
+new_string = separator.join(my_list)
+print(new_string)  # Output: "apple-banana-orange"
+```
 
-\*\*9. Splitting and Joining Strings:\*\*
+**10. Reversing Strings:**
 
-\`\`\`python
+```python
+my_string = "Hello, World!"
+reversed_string = my_string[::-1]
+print(reversed_string)  # Output: "!dlroW ,olleH"
+```
 
-My_string = "apple,banana,orange"
-
-My_list = my_string.split(",")
-
-Print(my_list) \# Output: \['apple', 'banana', 'orange'\]
-
-Separator = "-"
-
-New_string = separator.join(my_list)
-
-Print(new_string) \# Output: "apple-banana-orange"
-
-\`\`\`
-
-\*\*10. Reversing Strings:\*\*
-
-\`\`\`python
-
-My_string = "Hello, World!"
-
-Reversed_string = my_string\[::-1\]
-
-Print(reversed_string) \# Output: "!dlroW ,olleH"
-
-\`\`\`
+These examples cover some of the most common string operations in Python. You can use these operations to manipulate and work with strings effectively in your programs.
