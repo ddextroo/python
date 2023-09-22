@@ -151,7 +151,3 @@ result = find_max(7, 3, 9)
 print(result)  # Output: 9
 ```
 
-This cheat sheet provides an overview of user-defined functions in Python, including function definition, parameters, return statements, scope, recursion, lambda functions, function annotations, and examples.
-```
-
-You can copy and paste this markdown code into a GitHub README or Markdown file.
