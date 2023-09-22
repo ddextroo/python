@@ -17,7 +17,7 @@ def my_function():
 my_function()  # Call the function
 ```
 
-### Function Parameters
+**Function Parameters**
 
 ```python
 def greet(name):
@@ -26,7 +26,7 @@ def greet(name):
 greet("Alice")  # Output: Hello, Alice!
 ```
 
-### Default Parameters
+**Default Parameters**
 
 ```python
 def greet(name="User"):
@@ -36,7 +36,7 @@ greet()         # Output: Hello, User!
 greet("Alice")  # Output: Hello, Alice!
 ```
 
-### Return Statement
+**Return Statement**
 
 ```python
 def add(x, y):
@@ -48,7 +48,7 @@ print(result)  # Output: 7
 
 ## Scope and Lifetime
 
-### Global vs. Local Variables
+**Global vs. Local Variables**
 
 ```python
 x = 10  # Global variable
