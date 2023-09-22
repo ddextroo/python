@@ -141,11 +141,7 @@ Use f-strings (`f"..."`) for string formatting, including variable substitution.
 
 Strings can be compared using comparison operators (`==`, `!=`, `<`, `<=`, `>`, `>=`), which compare lexicographically.
 ```
-
-You can copy and paste this Markdown code into your GitHub repository or Markdown editor to create a neat cheatsheet.
-
-
-
+```
 **1. String Length:**
 ```python
 my_string = "Hello, World!"
