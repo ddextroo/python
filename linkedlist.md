@@ -3,7 +3,7 @@
 ## Python LinkedList Cheat Sheet
 ## LinkedList Basics
 
-### Definition
+## Definition
 
 A LinkedList is a data structure consisting of a sequence of elements, where each element points to the next element in the sequence. 
 
