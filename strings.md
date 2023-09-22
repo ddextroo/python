@@ -1,7 +1,6 @@
 
-```markdown
-Python Strings Cheatsheet
-```
+## Python Strings Cheatsheet
+
 ## Creating Strings
 
 
