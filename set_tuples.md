@@ -1,5 +1,5 @@
 
-**Tuples:**
+## Tuples:
 
 1. **Creating Tuples:**
    - `my_tuple = (item1, item2, ...)` - Create a tuple.
@@ -28,7 +28,7 @@
 9. **Immutable:**
    - Tuples are immutable, so you cannot modify elements once assigned.
 
-**Sets:**
+# Sets:
 
 1. **Creating Sets:**
    - `my_set = {item1, item2, ...}` - Create a set.
