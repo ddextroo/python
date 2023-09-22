@@ -3,8 +3,7 @@
 # Python Strings Cheatsheet
 ```
 ## Creating Strings
-
-
+```
 ```
 1. **Double Quotes:**
    ```python
