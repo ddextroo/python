@@ -47,6 +47,8 @@
 12. **Default Values:**
     - Use `defaultdict` from the `collections` module to create dictionaries with default values for missing keys.
 
+## Examples
+
 **Creating Dictionaries:**
 
 ```python
