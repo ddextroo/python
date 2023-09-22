@@ -189,4 +189,3 @@ print(animal_speak(cat))  # Output: "Meow!"
 This cheat sheet provides an overview of Python Object and Class concepts, including class and object definition, constructor methods, instance variables, methods, inheritance, encapsulation, polymorphism, and examples.
 ```
 
-You can copy and paste this markdown code into a GitHub README or Markdown file.
