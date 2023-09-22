@@ -1,7 +1,6 @@
 
-```markdown
-# Python LinkedList Cheat Sheet
 
+## Python LinkedList Cheat Sheet
 ## LinkedList Basics
 
 ### Definition
