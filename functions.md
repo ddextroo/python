@@ -1,6 +1,4 @@
 
-
-```markdown
 # Python User-Defined Functions Cheat Sheet
 
 ## Function Basics
