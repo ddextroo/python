@@ -148,5 +148,3 @@ for key, value in my_dict.items():
 new_dict = my_dict.copy()
 print(new_dict)  # Output: {'name': 'John', 'age': 31, 'job': 'Engineer'}
 ```
-
-You can copy and paste this Markdown into your GitHub repository.
