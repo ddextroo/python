@@ -63,7 +63,7 @@ print(y)       # Error: NameError: name 'y' is not defined
 
 ## Recursion
 
-### Recursive Function
+**Recursive Function**
 
 ```python
 def factorial(n):
@@ -78,7 +78,7 @@ print(result)  # Output: 120
 
 ## Lambda Functions
 
-### Lambda Function
+**Lambda Function**
 
 ```python
 multiply = lambda x, y: x * y
@@ -88,7 +88,7 @@ print(result)  # Output: 12
 
 ## Function Annotations
 
-### Function Annotations
+**Function Annotations**
 
 ```python
 def add(x: int, y: int) -> int:
@@ -100,7 +100,7 @@ print(result)  # Output: 7
 
 ## Docstrings
 
-### Function Docstring
+**Function Docstring**
 
 ```python
 def greet(name):
