@@ -71,7 +71,7 @@ class ChildClass(ParentClass):
     # Attributes and methods
 ```
 
-### Method Overriding
+**Method Overriding**
 
 ```python
 class ParentClass:
