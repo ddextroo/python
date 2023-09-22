@@ -116,7 +116,7 @@ Python does not support function overloading like some other languages.
 
 ## Examples
 
-### Example 1: Calculate the Area of a Rectangle
+**Example 1: Calculate the Area of a Rectangle**
 
 ```python
 def calculate_area(length, width):
@@ -126,7 +126,7 @@ area = calculate_area(5, 4)
 print(f"The area is {area} square units.")  # Output: The area is 20 square units.
 ```
 
-### Example 2: Check if a Number is Even
+**Example 2: Check if a Number is Even**
 
 ```python
 def is_even(number):
@@ -139,7 +139,7 @@ result = is_even(7)
 print(result)  # Output: False
 ```
 
-### Example 3: Find the Maximum of Three Numbers
+**Example 3: Find the Maximum of Three Numbers**
 
 ```python
 def find_max(x, y, z):
