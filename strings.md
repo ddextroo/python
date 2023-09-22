@@ -232,5 +232,3 @@ my_string = "Hello, World!"
 reversed_string = my_string[::-1]
 print(reversed_string)  # Output: "!dlroW ,olleH"
 ```
-
-These examples are now formatted in GitHub-flavored Markdown (GFM) for better readability.
