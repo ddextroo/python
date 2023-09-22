@@ -58,6 +58,8 @@
 12. **Copying Lists:**
     - `new_list = my_list.copy()` - Create a shallow copy of the list.
 
+## Examples
+
 1. **Creating Lists:**
 
 ```python
