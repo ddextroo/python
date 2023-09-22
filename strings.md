@@ -140,8 +140,7 @@ Use f-strings (`f"..."`) for string formatting, including variable substitution.
 ## String Comparison
 
 Strings can be compared using comparison operators (`==`, `!=`, `<`, `<=`, `>`, `>=`), which compare lexicographically.
-```
-```
+
 **1. String Length:**
 ```python
 my_string = "Hello, World!"
