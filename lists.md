@@ -139,5 +139,3 @@ print(my_list)       # Output: [1, 2, 6, 5, 7, 8]
 my_list.clear()
 print(my_list)  # Output: []
 ```
-
-You can copy and paste this Markdown into your GitHub repository.
