@@ -1,5 +1,4 @@
 
-```markdown
 # Python Object & Class Cheat Sheet
 
 ## Classes and Objects
