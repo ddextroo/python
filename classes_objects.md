@@ -142,7 +142,7 @@ student = Student("Alice", 20)
 print(student.display_info())  # Output: "Name: Alice, Age: 20"
 ```
 
-***Example 2: Inheritance with Shape Classes**
+**Example 2: Inheritance with Shape Classes**
 
 ```python
 class Shape:
