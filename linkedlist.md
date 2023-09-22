@@ -3,11 +3,11 @@
 ## Python LinkedList Cheat Sheet
 ## LinkedList Basics
 
-## Definition
+**Definition**
 
 A LinkedList is a data structure consisting of a sequence of elements, where each element points to the next element in the sequence. 
 
-## Types of LinkedLists
+**Types of LinkedLists**
 
 1. **Singly LinkedList**: Each node has a reference to the next node.
 2. **Doubly LinkedList**: Each node has references to both the next and previous nodes.
@@ -15,7 +15,7 @@ A LinkedList is a data structure consisting of a sequence of elements, where eac
 
 ## Node Structure
 
-### Singly LinkedList Node
+**Singly LinkedList Node**
 
 ```python
 class Node:
@@ -24,7 +24,7 @@ class Node:
         self.next = None
 ```
 
-### Doubly LinkedList Node
+**Doubly LinkedList Node**
 
 ```python
 class Node:
@@ -36,7 +36,7 @@ class Node:
 
 ## Creating a LinkedList
 
-### Singly LinkedList
+**Singly LinkedList**
 
 ```python
 class SinglyLinkedList:
@@ -44,7 +44,7 @@ class SinglyLinkedList:
         self.head = None
 ```
 
-### Doubly LinkedList
+**Doubly LinkedList**
 
 ```python
 class DoublyLinkedList:
@@ -63,7 +63,7 @@ class CircularLinkedList:
 
 ## LinkedList Operations
 
-### Insertion at the Beginning
+**Insertion at the Beginning**
 
 ```python
 def insert_at_beginning(self, data):
@@ -72,7 +72,7 @@ def insert_at_beginning(self, data):
     self.head = new_node
 ```
 
-### Insertion at the End
+**Insertion at the End**
 
 ```python
 def insert_at_end(self, data):
