@@ -63,6 +63,8 @@
    - `my_set = set(my_list)` - Convert a list to a set (removes duplicates).
    - `my_set = set(my_tuple)` - Convert a tuple to a set.
 
+## Examples
+
 **Tuples:**
 
 1. **Creating Tuples and Accessing Elements:**
