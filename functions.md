@@ -3,7 +3,7 @@
 
 ## Function Basics
 
-### Defining a Function
+**Defining a Function**
 
 ```python
 def my_function():
@@ -11,7 +11,7 @@ def my_function():
     pass
 ```
 
-### Calling a Function
+**Calling a Function**
 
 ```python
 my_function()  # Call the function
