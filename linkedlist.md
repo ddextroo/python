@@ -196,8 +196,3 @@ circular_linkedlist.delete(3)
 # Display the Circular LinkedList after deletion
 circular_linkedlist.display()  # Output: 1 -> 2 -> 4 -> 5 -> (back to 1)
 ```
-
-This cheat sheet provides an overview of Python LinkedList concepts, including Singly, Doubly, and Circular LinkedLists, node structure, creating LinkedLists, and common LinkedList operations with code examples.
-```
-
-You can copy and paste this markdown code into a GitHub README or Markdown file.
