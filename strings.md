@@ -3,7 +3,7 @@
 # Python Strings Cheatsheet
 
 ## Creating Strings
-
+```
 1. **Double Quotes:**
    ```python
    my_string = "Hello, World!"
