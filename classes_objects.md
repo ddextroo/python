@@ -3,7 +3,7 @@
 
 ## Classes and Objects
 
-### Class Definition
+**Class Definition**
 
 ```python
 class MyClass:
@@ -11,13 +11,13 @@ class MyClass:
     pass
 ```
 
-### Creating Objects
+**Creating Objects**
 
 ```python
 obj = MyClass()  # Create an instance of MyClass
 ```
 
-### Constructor Method
+**Constructor Method**
 
 ```python
 class MyClass:
@@ -26,7 +26,7 @@ class MyClass:
         self.param2 = param2
 ```
 
-### Instance Variables
+**Instance Variables**
 
 ```python
 obj = MyClass("value1", "value2")
@@ -35,7 +35,7 @@ print(obj.param1)  # Access instance variable
 
 ## Methods
 
-### Instance Methods
+**Instance Methods**
 
 ```python
 class MyClass:
@@ -47,7 +47,7 @@ obj = MyClass()
 obj.my_method()
 ```
 
-### Class Methods
+**Class Methods**
 
 ```python
 class MyClass:
@@ -61,7 +61,7 @@ MyClass.my_class_method()
 
 ## Inheritance
 
-### Base Class (Superclass)
+**Base Class (Superclass)**
 
 ```python
 class ParentClass:
@@ -88,7 +88,7 @@ print(child_obj.my_method())  # Output: "Child method"
 
 ## Encapsulation
 
-### Private Variables
+**Private Variables**
 
 ```python
 class MyClass:
@@ -104,7 +104,7 @@ print(obj.get_private_var())  # Access private variable
 
 ## Polymorphism
 
-### Duck Typing
+**Duck Typing**
 
 ```python
 class Dog:
@@ -127,7 +127,7 @@ print(animal_speak(cat))  # Output: "Meow!"
 
 ## Examples
 
-### Example 1: Creating a Student Class
+**Example 1: Creating a Student Class**
 
 ```python
 class Student:
@@ -142,7 +142,7 @@ student = Student("Alice", 20)
 print(student.display_info())  # Output: "Name: Alice, Age: 20"
 ```
 
-### Example 2: Inheritance with Shape Classes
+***Example 2: Inheritance with Shape Classes**
 
 ```python
 class Shape:
@@ -161,7 +161,7 @@ rectangle = Rectangle(5, 4)
 print(rectangle.area())  # Output: 20
 ```
 
-### Example 3: Polymorphism with Animal Classes
+**Example 3: Polymorphism with Animal Classes**
 
 ```python
 class Animal:
