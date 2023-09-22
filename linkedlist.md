@@ -86,7 +86,7 @@ def insert_at_end(self, data):
     current.next = new_node
 ```
 
-### Deletion
+**Deletion**
 
 ```python
 def delete(self, data):
@@ -103,7 +103,7 @@ def delete(self, data):
         current = current.next
 ```
 
-### Search
+**Search**
 
 ```python
 def search(self, data):
@@ -115,7 +115,7 @@ def search(self, data):
     return False
 ```
 
-### Display
+**Display**
 
 ```python
 def display(self):
