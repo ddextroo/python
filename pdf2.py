@@ -10,6 +10,7 @@ app = Flask(__name__)
 
 def process_pdf(**details):
     tables = tabula.read_pdf(details.get("pdf_url"), pages=details.get("page"), multiple_tables=True)
+    description = details.get("description_column")
 
     # Initialize empty lists to store data for each page
     all_tables = []
@@ -21,9 +22,9 @@ def process_pdf(**details):
     for page_number, table_df in enumerate(tables, start=1):
         # Process each page's table
         pattern = r'^[0-9]+(st|nd|rd|th) Semester'
-        semester_changes = table_df.iloc[:, 2].str.match(pattern, na=False)  # Using column number 2 for DESCRIPTION
+        semester_changes = table_df.iloc[:, description].str.match(pattern, na=False)  # Using column number 2 for DESCRIPTION
         semester_indices = semester_changes.cumsum() - 1
-        semesters_available = table_df.loc[semester_changes, table_df.columns[2]]
+        semesters_available = table_df.loc[semester_changes, table_df.columns[description]]
         semester_positions = list(range(len(semesters_available)))  # Calculate positions for each semester
 
         all_tables.append(table_df)
@@ -40,13 +41,15 @@ def process_pdf(**details):
     return full_table, all_semester_indices, all_semesters_available, all_semester_positions, all_semester_pages
 
 
+
 @app.route('/gpa/process_pdf', methods=['POST'])
 def api_process_pdf():
     data = request.json
     pdf_url = data.get('pdf_url')
+    description_column = data.get('description')
 
     if pdf_url:
-        _, _, semesters_available, semester_positions, semester_pages = process_pdf(pdf_url=pdf_url, page='all')
+        _, _, semesters_available, semester_positions, semester_pages = process_pdf(pdf_url=pdf_url, page='all', description_column=description_column)
 
         result = []
         semesters_list = semesters_available.tolist()
@@ -63,24 +66,29 @@ def api_retrieve_semester():
     pdf_url = data.get('pdf_url')
     selected_semester_idx = data.get('selected_semester_idx')
     page = data.get('page')
+    subject_column = data.get('subject')
+    description_column = data.get('description')
+    unit_column = data.get('unit')
+    grade_column = data.get('grade')
+    comp_column = data.get('comp')
 
     if pdf_url and selected_semester_idx is not None:
-        full_table, semester_indices, semesters_available, semester_positions, page = process_pdf(pdf_url = pdf_url, page = page)
+        full_table, semester_indices, semesters_available, semester_positions, page = process_pdf(pdf_url = pdf_url, page = page, description_column = description_column)
 
         if 0 <= selected_semester_idx < len(semesters_available):
             selected_semester_table = full_table[semester_indices == selected_semester_idx]
 
-            comp_row = selected_semester_table[selected_semester_table.iloc[:, 2] == '7']  # Using column number 2 for DESCRIPTION
-            grade_row = selected_semester_table[selected_semester_table.iloc[:, 2] == '8']  # Using column number 2 for DESCRIPTION
-            if not comp_row.empty and not pd.isna(comp_row.iloc[0, 7]):  # Using column number 7 for GRADE
-                selected_semester_table.loc[grade_row.index, full_table.columns[7]] = comp_row.iloc[0, 7]  # Using column number 7 for GRADE
+            comp_row = selected_semester_table[selected_semester_table.iloc[:, description_column] == grade_column]  # Using column number 2 for DESCRIPTION
+            grade_row = selected_semester_table[selected_semester_table.iloc[:, description_column] == comp_column]  # Using column number 2 for DESCRIPTION
+            if not comp_row.empty and not pd.isna(comp_row.iloc[0, grade_column]):  # Using column number 7 for GRADE
+                selected_semester_table.loc[grade_row.index, full_table.columns[grade_column]] = comp_row.iloc[0, grade_column]  # Using column number 7 for GRADE
 
             selected_semester_table.loc[
-                selected_semester_table.iloc[:, 7].isna() & selected_semester_table.iloc[:, 8].notna(),  # Using column numbers 7 and 8 for GRADE and COMP
-                full_table.columns[7]  # Using column number 7 for GRADE
-            ] = selected_semester_table.iloc[:, 8]  # Using column number 8 for COMP
+                selected_semester_table.iloc[:, grade_column].isna() & selected_semester_table.iloc[:, comp_column].notna(),  # Using column numbers 7 and 8 for GRADE and COMP
+                full_table.columns[grade_column]  # Using column number 7 for GRADE
+            ] = selected_semester_table.iloc[:, comp_column]  # Using column number 8 for COMP
 
-            filtered_table = selected_semester_table.iloc[:, [1, 2, 3, 7]].dropna()  # Using column numbers 1, 2, 3, and 7
+            filtered_table = selected_semester_table.iloc[:, [subject_column, description_column, unit_column, grade_column]].dropna()  # Using column numbers 1, 2, 3, and 7
 
             # Rename columns to new keys
             filtered_table.columns = ['SUBJECT', 'DESCRIPTION', 'UNIT', 'GRADE']

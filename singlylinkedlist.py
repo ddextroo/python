@@ -1,39 +1,60 @@
 class node:
-    def __init__(self, value):
-        self.value = value
+    def __init__(self,data):
+        self.data = data
         self.next = None
-
-class LinkedList:
+        
+class linkedlist:
     def __init__(self):
         self.head = None
-
-    def add_node(self, data):
-        new_node = node(data)
-
-        if self.head is None:
-            self.head = new_node
+        
+    def empty(self):
+        return self.head is None
+    
+    def append(self,data):
+        n_node = node(data)
+        if self.empty():
+            self.head = n_node
         else:
             current = self.head
-            while current.next is not None:
+            while current.next:
                 current = current.next
-            current.next = new_node
-
+            current.next = n_node
+            
+    def prepend(self,data):
+        n_node = node(data)
+        n_node.next = self.head
+        self.head = n_node
+        
+    def delete(self, data):
+        if self.head is None:
+            return
+        if self.head.data == data:
+            self.head = self.head.next
+            return
+        
+        current = self.head
+        while current.next:
+            if current.next.data == data:
+                current.next = current.next.next
+                return
+            current = current.next
+    
     def display(self):
-        if self.head is None:
-            print("empty")
-        else:
-            current = self.head
-            while current is not None:
-                print(current.value, end="|")
-                print(current.next, end=" -> ")
-                current = current.next
-        print()
+        current = self.head
+        while current:
+            print(f"{current.data} -> {current.next}", end=" ")
+            current = current.next
+            
 
-
-ll = LinkedList()
-
-ll.add_node(1)
-ll.add_node(2)
-ll.add_node(3)
-
-ll.display()
+if __name__ == '__main__':
+    ll = linkedlist()
+    
+    ll.append(2)
+    ll.append(1)
+    ll.prepend(3)
+    ll.append(6)
+    
+    ll.display()
+    
+    
+        

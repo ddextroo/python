@@ -1,5 +1,3 @@
-#https://chat.gpt4free.io/
-
 from flask import Flask, request, jsonify
 from matplotlib.font_manager import FontProperties
 import matplotlib.pyplot as plt
